@@ -1,0 +1,661 @@
+/* ==========================================================
+   CONFIGURAÇÃO GLOBAL
+========================================================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+    width: 100%;
+    font-size: 14px;
+}
+
+.img-emergencia {
+    max-width: 320px;
+    max-height: 220px;
+    object-fit: cover;
+}
+
+/* ==========================================================
+   HEADER E FOOTER
+========================================================== */
+header, footer {
+  width: 100%;
+  padding: 12px 0;
+  background: #004823;
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 18px 0;
+}
+
+footer {
+  margin-top: auto;
+  padding: 10px 0;
+}
+
+/* ==========================================================
+   PÁGINA PRINCIPAL (index)
+========================================================== */
+body.index .container {
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+
+body.index {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.index .menu-lateral {
+  width: 260px;
+  min-width: 260px;
+  background: #004823;
+  padding: 20px;
+  color: white;
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+}
+
+body.index .menu-lateral a {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  text-decoration: none;
+}
+
+body.index .principal-container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+body.index .principal-texto {
+  max-width: 520px;
+  margin-left: 90px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+body.index .principal-texto h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+body.index .principal-texto p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+body.index .principal-foto {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+body.index .principal-foto img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* ========================= */
+/* SEGURANÇA PESSOAL         */
+/* ========================= */
+body.segpessoal .page-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* centraliza verticalmente */
+  margin-top: 45px;
+}
+
+body.segpessoal .page-texto {
+  width: 45%;
+  margin-left: 10px;     /* texto mais à esquerda */
+  text-align: left;
+}
+
+body.segpessoal .page-foto {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;   /* centraliza a imagem */
+}
+
+body.segpessoal .page-foto img {
+  width: 550px;          /* aumenta a imagem */
+  margin-right: 20px;    /* leva mais para direita */
+  margin-top: 50px;      /* desce a imagem */
+  border-radius: 8px;
+}
+
+/* ==========================================================
+   PÁGINAS INTERNAS (geral)
+========================================================== */
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.page-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1;
+}
+
+.page-texto {
+  width: 50%;
+  font-size: 18px;
+}
+
+.page-foto {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.voltar {
+  display: inline-block;
+  margin: 15px 0 0 0;
+  font-size: 18px;
+  text-decoration: none;
+  color: #004823;
+}
+
+/* ==========================================================
+   PÁGINAS INTERNAS ESPECÍFICAS
+========================================================== */
+
+/* Segurança Pessoal */
+body.segpessoal .page-content { }
+body.segpessoal .page-texto { }
+body.segpessoal .page-foto img { }
+
+/* ========================= */
+/* SEGURANÇA RESIDENCIAL     */
+/* ========================= */
+body.segresidencial .page-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* centraliza verticalmente */
+  margin-top: 45px;
+}
+
+body.segresidencial .page-texto {
+  width: 45%;
+  margin-left: 10px;     /* texto mais à esquerda */
+  text-align: left;
+}
+
+body.segresidencial .page-foto {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;   /* centraliza a imagem */
+}
+
+body.segresidencial .page-foto img {
+  width: 550px;          /* aumenta a imagem */
+  margin-right: 20px;    /* leva mais para direita */
+  margin-top: 50px;      /* desce a imagem */
+  border-radius: 8px;
+}
+
+/* ========================= */
+/*   SEGURANÇA NO TRÂNSITO  */
+/* ========================= */
+body.segtransito .page-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* centraliza verticalmente */
+  margin-top: 45px;
+}
+
+body.segtransito .page-texto {
+  width: 45%;
+  margin-left: 10px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+body.segtransito .page-foto {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+body.segtransito .page-foto img {
+  width: 650px;
+  margin-right: 20px;  /* empurra mais para direita */
+  margin-top: 50px;    /* alinha posição vertical */
+  border-radius: 8px;
+}
+
+/* ========================= */
+/*   SEGURANÇA INFANTIL     */
+/* ========================= */
+body.seginfantil .page-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 45px;
+}
+
+body.seginfantil .page-texto {
+  width: 45%;
+  margin-left: 10px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+body.seginfantil .page-foto {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+body.seginfantil .page-foto img {
+  width: 600px;
+  margin-right: 10px;
+  margin-top: 50px;
+  border-radius: 8px;
+}
+
+
+/* --- Páginas específicas usam as mesmas classes padronizadas ---
+   Mantemos regras específicas apenas quando necessário, sem duplicações. */
+
+/* Segurança Digital e Prevenção de Acidentes
+   - objetivo: evitar que texto/in imagens empurrem footer,
+     garantir que ocupem espaço lado-a-lado e respeitem o fluxo natural.
+*/
+body.segdigital,
+body.segacidentes{
+  /* mantém o comportamento normal do documento: footer no final */
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+/* Forçar o contêiner a ocupar área disponível para empurrar o footer */
+body.segdigital .page-container,
+body.segacidentes .page-container{
+  flex:1;
+}
+
+/* Ajustes visuais específicos (mantendo consistência com .page-texto/.page-foto) */
+body.segdigital .page-texto,
+body.segacidentes .page-texto,
+body.segdigital .texto-conteudo,
+body.segacidentes .texto-conteudo{
+  width:50%;
+  line-height:1.35; /* deixa o texto mais compacto sem reduzir font-size */
+  margin-right:8px;
+}
+
+/* Limita imagens para não empurrar o layout e centraliza visualmente */
+body.segdigital .page-foto img,
+body.segacidentes .page-foto img{
+  max-width:460px;
+  max-height:380px;
+}
+
+/* Evita overflow inesperado dentro dessas páginas */
+body.segdigital .page-content,
+body.segacidentes .page-content{
+  overflow:visible; /* visível é o padrão; não forçar scroll interno */
+}
+
+/* --- Responsivo --- */
+@media (max-width: 920px){
+  .page-content{
+    flex-direction:column;
+    align-items:center;
+  }
+  .page-texto, .texto-conteudo,
+  .page-foto, .imagem-conteudo{
+    width:100%;
+  }
+  .page-foto img,
+  .imagem-conteudo img{max-width:90%; max-height:320px}
+}
+
+/* Pequenos retoques para elementos que já apareceram com problema antes */
+img{display:block; max-width:100%}
+
+/* --- Segurança: regras finais (sem !important salvo necessidade) --- */
+/* Garante que não haja rolagem horizontal */
+html,body{overflow-x:hidden}
+
+
+/* ========================= */
+/* FORTALECENDO A COMUNIDADE */
+/* ========================= */
+body.segcomunidade .page-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+body.segcomunidade .page-texto {
+  width: 45%;
+  margin-left: 10px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+body.segcomunidade .page-foto {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+body.segcomunidade .page-foto img {
+  width: 600px;
+  margin-right: 20px;
+  margin-top: 50px;
+  border-radius: 8px;
+}
+
+/* ======== LAYOUT CONTATOS DE EMERGÊNCIA ======== */
+body.emergencia .page-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  flex-wrap: wrap;
+  min-height: auto;
+  margin-top: 40px;
+}
+
+/* LINKS À ESQUERDA */
+body.emergencia .links-emergencia {
+  flex: 1 1 200px;
+  max-width: 220px;  
+  width: 22%;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+body.emergencia .links-emergencia ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body.emergencia .links-emergencia li {
+  margin-bottom: 15px;
+}
+
+body.emergencia .links-emergencia a {
+  text-decoration: none;
+  color: #004823;
+  font-weight: bold;
+}
+
+/* TABELA AO CENTRO */
+body.emergencia .table-container {
+  width: 30%;
+  margin-top: 20px;
+}
+
+body.emergencia table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+body.emergencia th, 
+body.emergencia td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #004823;
+  font-size: 14px;
+}
+
+/* FOTO À DIREITA */
+body.emergencia .page-foto {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+body.emergencia .page-foto img {
+  width: 100%;
+  max-width: 650px;
+  margin-top: 20px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* VOLTAR AO INÍCIO */
+body.emergencia .voltar {
+  display: block;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #004823;
+  text-decoration: none;
+}
+
+/* ==========================================================
+   AJUSTE FOOTER E SCROLL (NÃO REMOVER)
+========================================================== */
+body.segdigital .page-texto p,
+body.segacidentes .page-texto p {
+  line-height: 1.35 !important;
+  margin-bottom: 10px !important;
+}
+
+body.segdigital .page-content {
+  margin-top: 5px !important;
+}
+
+body.segacidentes .page-content {
+  margin-top: 5px !important;
+}
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 768px) {
+  body.emergencia .page-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  body.emergencia .links-emergencia,
+  body.emergencia .table-container,
+  body.emergencia .page-foto {
+    width: 100%;
+  }
+
+  body.emergencia .page-foto img {
+    max-width: 90%;
+    margin-top: 20px;
+  }
+}
+
+.page-texto h3.intro {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+body.segdigital .page-content,
+body.segacidentes .page-content {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  align-items: center !important;
+}
+
+body.segdigital .page-foto img,
+body.segacidentes .page-foto img {
+  max-height: 380px;
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+@media (max-width: 768px) {
+  .page-content, 
+  body.index .principal-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .page-texto, .page-foto,
+  body.index .principal-texto, 
+  body.index .principal-foto {
+    width: 100%;
+  }
+
+  body.index .menu-lateral {
+    width: 100%;
+    min-width: 100%;
+    max-height: none;
+  }
+
+    .voltar {
+    margin: 15px 0;
+  }
+
+  .intro-residencial {
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+}
+
+.page-texto p,
+.page-texto h3,
+.page-texto ul,
+.principal-texto p {
+    text-align: left;
+}
+
+body.segpessoal,
+body.segresidencial,
+body.seginfantil,
+body.segtransito,
+body.segdigital,
+body.segacidentes,
+body.segcomunidade,
+body.emergencia {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body:not(.index) .page-content {
+  margin-top: 10px !important;
+}
+
+body:not(.index) .page-foto img {
+  max-height: 580px;
+  object-fit: contain;
+}
+
+/* =========================================
+   PADRONIZAÇÃO DAS PÁGINAS INTERNAS
+   ========================================= */
+
+body:not(.principal) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-container {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.page-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.page-foto img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* Rodapé fixo corretamente */
+footer {
+  flex-shrink: 0;
+}
+
+html, body {
+  overflow-y: auto;
+}
+
+/* =============================================
+   FORÇAR A PÁGINA A NÃO CRIAR SCROLL HORIZONTAL
+============================================= */
+
+html, body {
+  overflow-x: hidden !important;
+}
+
+.ajusta {
+  padding-bottom: 100px !important;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+
+
+
+
+
+
+
